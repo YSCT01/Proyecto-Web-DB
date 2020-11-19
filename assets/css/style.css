@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: arial;
+}
+/*====HEADER====*/
+body{
+    width: 100%;
+    height: auto;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    color:white;
+    display: grid;
+    grid-template-columns: 10% 70%;
+    justify-content: space-between;
+}
+
+header #logo{
+    text-decoration: none;
+    margin: auto;
+    color: #0da5e0;
+    font-size: 1.5em;
+    padding-left: 20px;
+}
+
+ nav{
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+
+ nav #mainnav{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+
+}
+
+ nav #mainnav li{
+    font-size: 1.2em;
+    color:white;
+    margin: auto;
+    transition: 400ms;
+    cursor: pointer;
+    list-style: none;
+}
+
+ nav #mainnav li a{
+    text-decoration: none;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+ nav #mainnav li:hover{
+    transform: scale(1.1,1.1);
+    color: #0da5e0;
+}
+
+ nav #mainnav li ul{
+    display: none;
+    position: absolute;
+    width: auto;
+    transition: 400ms;
+}
+
+ nav #mainnav li:hover > ul{
+    display: grid;
+    background-color: black;
+    margin-top: 5px;
+}
+
+ nav #mainnav li > ul li{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+ nav #mainnav li > ul li a{
+    font-size: .8em;
+    padding: 10px;
+    margin: auto;
+}
+
+.menu-fixed {
+    position:sticky;
+    z-index:1000;
+    top:0;
+    left:0;
+}
+/*====HEADER====*/
+
+/*====CONTENT====*/
+#maincontent{
+    width: 100%;
+    min-height: 85vh;
+    display: grid;
+}
+/*====CONTENT====*/
+
+/*====FOOTER====*/
+footer{
+    background-color: black;
+    display: grid;
+    padding: 10px 0;
+}
+
+footer span{
+    text-align: center;
+    font-size: 1em;
+    color:white;
+    margin-bottom: 10px;
+}
+
+footer #botfooter{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+footer #botfooter #social{
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-evenly;
+}
+
+footer #botfooter #social i{
+    color:white;
+    font-size: 1.5em;
+    margin: auto;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+footer #botfooter #social i:hover{
+    color:#0da5e0;
+    transform: scale(1.1,1.1);
+}
+
+footer nav #mainnav li ul{
+    bottom: 30px;
+}
+/*====FOOTER====*/
