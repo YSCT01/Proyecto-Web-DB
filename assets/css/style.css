@@ -8,6 +8,7 @@ body{
     width: 100%;
     height: auto;
     background-image: url("../images/bg.jpg");
+    background-size: contain;
 }
 
 header{
@@ -39,7 +40,7 @@ header #logo{
     height: 100%;
     margin: auto;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
     justify-content: space-between;
 }
 
@@ -156,7 +157,7 @@ footer nav #mainnav li ul{
 /*====Index=====*/
 #indexfull{
     width: 100%;
-    height: 90vh;
+    height: 91vh;
     background-image: url("../images/bgbanner.jpg");
     background-size: cover;
 }
@@ -180,7 +181,8 @@ footer nav #mainnav li ul{
     font-size: 1.6em;
 }
 
-#indexNosotros > div{
+#indexNosotros > div,
+#indexContacto > div{
     width: 90%;
     margin: 25px auto;
     display: grid;
@@ -188,20 +190,24 @@ footer nav #mainnav li ul{
     justify-content: space-evenly;
 }
 
-#indexNosotros > div img{
+#indexNosotros > div img,
+#indexContacto > div img{
     width: 80%;
+    max-height: 400px;
     margin: auto;
     border-radius: 10px;
 }
 
-#indexNosotros div div{
+#indexNosotros div div,
+#indexContacto div div{
     width: 100%;
     height: 100%;
     display: grid;
     grid-auto-rows: 50% 30%;
 }
 
-#indexNosotros div div p{
+#indexNosotros div div p,
+#indexContacto div div p{
     color:#0da5e0;
     font-size: 1.4em;
     text-align: justify;
@@ -209,7 +215,8 @@ footer nav #mainnav li ul{
     margin: auto;
 }
 
-#indexNosotros div div a{
+#indexNosotros div div a,
+#indexContacto div div a{
     font-size: 1.3em;
 }
 
@@ -217,8 +224,134 @@ footer nav #mainnav li ul{
 
 /*====Index=====*/
 /*====Nosotros=====*/
+#nosotrosM div,
+#nosotrosV div{
+    display: grid;
+    width: 90%;
+    margin: 25px auto;
+    grid-template-columns: 45% 45%;
+    justify-content: space-evenly;
+}
+
+#nosotrosM div img,
+#nosotrosV div img{
+    width: 90%;
+    max-height: 350px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+#nosotrosM div p,
+#nosotrosV div p{
+    font-size: 1.5em;
+    color:#0da5e0;
+    text-align: justify;
+    line-height: 30px;
+    margin: auto;
+}
 /*====Nosotros=====*/
 /*====Contacto=====*/
+
+#contContacto{
+    width: 100%;
+    display: grid;
+    height: 85vh;
+    margin: 15px 0;
+    grid-template-rows: 10% 90%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#contContacto h1{
+    color:white;
+    text-align: center;
+    font-size: 2em;
+}
+
+#contContacto > div{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 35% 65%;
+}
+
+#contContacto >div div{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-auto-rows: 50% 50%;
+}
+
+#contContacto > div div p{
+    color:white;
+    font-size: 1.5em;
+    margin: auto;
+    line-height: 30px;
+    padding-left: 30px;
+    text-align: justify;
+}
+
+#contContacto > div div li{
+    color:#0da5e0;
+    font-size: 1.4em;
+    padding-left: 30px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+#contContacto form{
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+}
+
+#contContacto form label{
+    color:white;
+    font-size: 1.4em;
+    text-align: left;
+    margin: auto;
+}
+
+#contContacto form input{
+    margin: auto;
+   height: fit-content;
+    width: 80%;
+    font-size: 1.3em;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #0da5e0;
+    color:#0da5e0;
+}
+
+#contContacto form textarea{
+   height: 225px;
+    padding: 5px;
+    width: 80%;
+    font-size: 1.3em;
+    resize: none;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #0da5e0;
+    margin: auto;
+    color:#0da5e0;
+}
+
+#contContacto form input[type="submit"]{
+    color:#0da5e0;
+    border: 1px solid #0da5e0;
+    text-align: center;
+    width: fit-content;
+    padding: 10px;
+    margin-top: 10px;
+}
+#contContacto form input[type="submit"]:hover{
+    color:white;
+    background: #0da5e0;
+}
 /*====Contacto=====*/
 /*========================MainController==============================================*/
 

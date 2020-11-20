@@ -12,6 +12,7 @@
         </div>
     </div>
 </section>
+
 <section id="indexProductos" class="indexcont">
     <h1>Productos</h1>
     <h2>Descubre los mejores productos</h2>
@@ -74,6 +75,15 @@
         </div>
     </div>
 </section>
-<section id="indexContacto">
 
+<section id="indexContacto" class="indexcont">
+    <h1>Comunícate</h1>
+    <h2>¿Tienes dudas?</h2>
+    <div>
+        <div>
+            <p>Si tienes dudas, preguntas, comentarios o deseas que algún miembro de nuestro equipo se comunique, no dudes en mandarnos un correo, haciendo click en el botón debajo</p>
+            <a href="<?=base_url?>main/contacto" class="button">Contactar</a>
+        </div>
+        <img src="<?=base_url?>assets/images/indexcontacto.jpg">
+    </div>
 </section>

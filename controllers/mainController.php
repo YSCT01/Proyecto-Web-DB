@@ -5,11 +5,19 @@ class mainController{
     }
 
     public function nosotros(){
-        echo "nosotros works";
+        require_once 'views/index/nosotros.php';
     }
 
     public function contacto(){
-        echo "contacto works";
+        require_once 'views/index/contacto.php';
+    }
+
+    public function login(){
+        echo "login";
+    }
+
+    public function signup(){
+        echo "signup";
     }
 
 }

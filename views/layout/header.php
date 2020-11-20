@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf8">
     <title>SmartWorld</title>
-    <link rel="stylesheet" href="<?=base_url?>assets/css/style.css?ver=1">
-    <link rel="stylesheet" href="<?=base_url?>assets/css/slider.css">
+    <link rel="stylesheet" href="<?=base_url?>assets/css/style.css?ver=1.1">
+    <link rel="stylesheet" href="<?=base_url?>assets/css/slider.css?ver=1.1">
     <script src="https://kit.fontawesome.com/32ec682ca2.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -24,6 +24,7 @@
             </li>
             <li><a href="<?=base_url?>main/contacto">Contacto</a></li>
             <li><a  href="<?=base_url?>main/nosotros">Nosotros</a></li>
+            <li><a  href="<?=base_url?>main/login">Iniciar sesión</a></li>
         </ul>
     </nav>
 </header>

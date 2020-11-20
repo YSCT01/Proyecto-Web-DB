@@ -16,6 +16,7 @@
                 </li>
                 <li><a  href="<?=base_url?>main/contacto">Contacto</a></li>
                 <li><a  href="<?=base_url?>main/nosotros">Nosotros</a></li>
+                <li><a  href="<?=base_url?>main/login">Iniciar sesión</a></li>
             </ul>
         </nav>
         <div id="social">
