@@ -4,7 +4,7 @@
     <span>SmartWorld &COPY; <?=date('Y');?></span>
     <div id="botfooter">
         <nav> <ul id="mainnav">
-                <li><a>Inicio</a></li>
+                <li><a href="<?=base_url?>">Inicio</a></li>
                 <li> Productos
                     <ul>
                         <li><a>Smartphones</a></li>
@@ -14,8 +14,8 @@
                         <li><a>Accesorios</a></li>
                     </ul>
                 </li>
-                <li><a>Contacto</a></li>
-                <li><a>Nosotros</a></li>
+                <li><a  href="<?=base_url?>main/contacto">Contacto</a></li>
+                <li><a  href="<?=base_url?>main/nosotros">Nosotros</a></li>
             </ul>
         </nav>
         <div id="social">
@@ -26,5 +26,6 @@
         </div>
     </div>
 </footer>
+<script src="<?=base_url?>assets/js/slider.js"></script>
 </body>
 </html>
