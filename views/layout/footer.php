@@ -16,7 +16,11 @@
                 </li>
                 <li><a  href="<?=base_url?>main/contacto">Contacto</a></li>
                 <li><a  href="<?=base_url?>main/nosotros">Nosotros</a></li>
-                <li><a  href="<?=base_url?>main/login">Iniciar sesión</a></li>
+                <?php if(isset($_SESSION['log'])): ?>
+                    <li><a href="<?=base_url?>"><?=$_SESSION['log']->nombres ?></a> <a  href="<?=base_url?>usuario/logOut" class="button">Cerrar Sesión</a></li>
+                <?php  else:?>
+                    <li><a  href="<?=base_url?>main/login">Iniciar sesión</a></li>
+                <?php endif;?>
             </ul>
         </nav>
         <div id="social">

@@ -3,7 +3,7 @@
     padding:0;
     font-family: arial;
 }
-/*====HEADER====*/
+/*==============================================================================================================HEADER*/
 body{
     width: 100%;
     height: auto;
@@ -61,7 +61,8 @@ header #logo{
     cursor: pointer;
 }
 
- nav #mainnav li:hover{
+ nav #mainnav li:hover,
+ nav #mainnav li a:hover{
     transform: scale(1.1,1.1);
     color: #0da5e0;
 }
@@ -97,17 +98,17 @@ header #logo{
     top:0;
     left:0;
 }
-/*====HEADER====*/
+/*==============================================================================================================HEADER*/
 
-/*====CONTENT====*/
+/*=============================================================================================================CONTENT*/
 #maincontent{
     width: 100%;
     min-height: 85vh;
     display: grid;
 }
-/*====CONTENT====*/
+/*=============================================================================================================CONTENT*/
 
-/*====FOOTER====*/
+/*==============================================================================================================FOOTER*/
 footer{
     background-color: black;
     display: grid;
@@ -150,11 +151,13 @@ footer #botfooter #social i:hover{
 footer nav #mainnav li ul{
     bottom: 30px;
 }
-/*====FOOTER====*/
+/*==============================================================================================================FOOTER*/
 
 
-/*========================MainController==============================================*/
-/*====Index=====*/
+/*======================================================================================================================MainController*/
+
+
+/*===============================================================================================================Index*/
 #indexfull{
     width: 100%;
     height: 91vh;
@@ -222,8 +225,8 @@ footer nav #mainnav li ul{
 
 
 
-/*====Index=====*/
-/*====Nosotros=====*/
+/*===============================================================================================================Index*/
+/*============================================================================================================Nosotros*/
 #nosotrosM div,
 #nosotrosV div{
     display: grid;
@@ -249,8 +252,8 @@ footer nav #mainnav li ul{
     line-height: 30px;
     margin: auto;
 }
-/*====Nosotros=====*/
-/*====Contacto=====*/
+/*============================================================================================================Nosotros*/
+/*============================================================================================================Contacto*/
 
 #contContacto{
     width: 100%;
@@ -352,11 +355,104 @@ footer nav #mainnav li ul{
     color:white;
     background: #0da5e0;
 }
-/*====Contacto=====*/
-/*========================MainController==============================================*/
+/*============================================================================================================Contacto*/
+/*===============================================================================================================Login*/
+.formsl{
+    width: 100%;
+    min-height: 85vh;
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.8);
+    grid-template-rows: 10% 90%;
+}
+.formsl h1{
+    color:white;
+    text-align: center;
+    font-size: 2em;
+    margin: auto;
+}
+
+.formsl form{
+    width: 60%;
+    height: fit-content;
+    padding: 20px 0;
+    margin: auto;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-rows: auto;
+    background-color: #000034;
+    border-radius: 25px;
+}
+
+#loginSec form{
+    margin: auto;
+}
+
+.formsl form label{
+    color:white;
+    margin: 15px auto;
+    text-align: center;
+    font-size: 1.5em;
+    margin: auto;
+    height: fit-content;
+}
+
+.formsl form input{
+    width: 80%;
+    margin: 15px auto;
+    background: transparent;
+    color: #0da5e0;
+    border: none;
+    border-bottom: 1px solid #0da5e0;
+    font-size: 1.5em;
+    padding: 3px;
+    height: fit-content;
+}
+
+.formsl form input[type="submit"]{
+    color:#0da5e0;
+    border: 1px solid #0da5e0;
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.5em;
+    padding: 10px;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.formsl form input[type="submit"]:hover{
+    color:white;
+    background-color: #0da5e0;
+    transform: scale(1.1,1.1);
+}
+
+.formsl form a{
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin: auto;
+    transition: 400ms;
+}
+
+.formsl form a:hover{
+    transform: scale(1.05,1.05);
+    color:#0da5e0;
+}
+
+/*===============================================================================================================Login*/
 
 
-/*========================Classes=======================================================*/
+
+/*======================================================================================================================MainController*/
+
+/*======================================================================================================================ProductosController*/
+
+
+
+/*======================================================================================================================ProductosController*/
+
+/*======================================================================================================================Classes*/
 .button{
     color: white;
     width: fit-content;
@@ -372,4 +468,18 @@ footer nav #mainnav li ul{
     transform: scale(1.1,1.1);
     background-color: white;
     color:#0da5e0;
+}
+
+.error{
+    font-size: 1.2em;
+    color:red;
+    margin:auto;
+    text-align: center;
+}
+
+.logro{
+    font-size: 1.2em;
+    color:green;
+    margin:auto;
+    text-align: center;
 }

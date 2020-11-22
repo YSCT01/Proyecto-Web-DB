@@ -91,10 +91,10 @@ $this->image = $image;
 }
 
 
-/*
+
 public function __construct(){
 $this->db = Database::connect();
 }
-*/
+
 
 }

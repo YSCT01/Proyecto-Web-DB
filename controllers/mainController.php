@@ -13,11 +13,11 @@ class mainController{
     }
 
     public function login(){
-        echo "login";
+       require_once 'views/index/login.php';
     }
 
     public function signup(){
-        echo "signup";
+        require_once 'views/index/signup.php';
     }
 
 }
