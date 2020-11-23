@@ -56,4 +56,13 @@ class usuarioController{
         header('location: '.base_url);
     }
 
+    public function profile(){
+        if(isset($_SESSION['log'])) {
+            require_once 'views/usuario/perfil.php';
+        }
+        else{
+            header('location:'.base_url);
+        }
+    }
+
 }

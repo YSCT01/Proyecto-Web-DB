@@ -5,4 +5,10 @@ class Utils{
             unset($_SESSION[$session]);
         }
     }
+
+    public static function isAdmin(){
+        if ($_SESSION['log']->rol != 'admin'){
+            header('location: '.base_url);
+        }
+    }
 }

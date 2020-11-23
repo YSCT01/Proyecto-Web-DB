@@ -12,15 +12,15 @@
                 <li>Sucursal Centro: 00-0000-0000</li>
             </ul>
         </div>
-        <form>
+        <form method="POST" action="<?=base_url?>main/sendEmail">
             <label for="name">Nombre</label>
             <input type="text" placeholder="Juan" name="name" required>
             <label for="lastname">Apellido</label>
-            <input type="text" placeholder="López" name="lastname"required>
+            <input type="text" placeholder="López" name="lastname" required>
             <label for="correo">Correo</label>
             <input type="email" placeholder="juan.lopez@ejemplo.com" name="email" required>
             <label for="message">Mensaje</label>
-            <textarea placeholder="Tu mensaje"></textarea>
+            <textarea placeholder="Tu mensaje" name="message"></textarea>
             <input class="button" type="submit" value="Enviar">
         </form>
     </div>

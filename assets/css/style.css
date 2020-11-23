@@ -9,6 +9,7 @@ body{
     height: auto;
     background-image: url("../images/bg.jpg");
     background-size: contain;
+    overflow-x: hidden;
 }
 
 header{
@@ -166,7 +167,6 @@ footer nav #mainnav li ul{
 }
 
 .indexcont{
-    margin: 20px 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.85);
     display: grid;
@@ -174,12 +174,14 @@ footer nav #mainnav li ul{
 
 .indexcont h1{
     color:white;
+    margin: auto;
     font-size: 2em;
     text-align: center;
 }
 
 .indexcont h2{
     color: #f2f2f2;
+    margin: auto;
     text-align: center;
     font-size: 1.6em;
 }
@@ -259,7 +261,6 @@ footer nav #mainnav li ul{
     width: 100%;
     display: grid;
     height: 85vh;
-    margin: 15px 0;
     grid-template-rows: 10% 90%;
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -267,6 +268,7 @@ footer nav #mainnav li ul{
 #contContacto h1{
     color:white;
     text-align: center;
+    margin: auto;
     font-size: 2em;
 }
 
@@ -274,6 +276,7 @@ footer nav #mainnav li ul{
     display: grid;
     width: 100%;
     height: 100%;
+
     grid-template-columns: 35% 65%;
 }
 
@@ -281,6 +284,7 @@ footer nav #mainnav li ul{
     width: 100%;
     height: 100%;
     display: grid;
+    margin-bottom: 50px;
     grid-auto-rows: 50% 50%;
 }
 
@@ -356,18 +360,23 @@ footer nav #mainnav li ul{
     background: #0da5e0;
 }
 /*============================================================================================================Contacto*/
+
+/*======================================================================================================================MainController*/
+
+/*======================================================================================================================UserController*/
 /*===============================================================================================================Login*/
 .formsl{
     width: 100%;
     min-height: 85vh;
     display: grid;
     background-color: rgba(0, 0, 0, 0.8);
-    grid-template-rows: 10% 90%;
+    grid-template-rows: auto auto;
 }
 .formsl h1{
     color:white;
     text-align: center;
     font-size: 2em;
+    padding: 15px 0;
     margin: auto;
 }
 
@@ -376,7 +385,6 @@ footer nav #mainnav li ul{
     height: fit-content;
     padding: 20px 0;
     margin: auto;
-    margin-bottom: 50px;
     display: grid;
     grid-template-rows: auto;
     background-color: #000034;
@@ -442,15 +450,201 @@ footer nav #mainnav li ul{
 
 /*===============================================================================================================Login*/
 
+/*=============================================================================================================Profile*/
+#profile{
+    width: 100%;
+    min-height: 85vh;
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.8);
+    grid-template-columns: 50% 50%;
+}
+
+#profile #userdata{
+    width: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 60% 10% 10% 10% 10%;
+    justify-content: center;
+}
+
+#profile #userdata img{
+    width: 100%;
+    margin: auto;
+    border-radius: 20px;
+}
+
+#profile #userdata h2{
+    color:#0da5e0;
+    font-size: 1.8em;
+    text-align: center;
+    margin: auto;
+}
+
+#profile #userdata h3{
+    color:#0da5e0;
+    font-size: 1.6em;
+    text-align: center;
+    margin: auto;
+}
+
+#profile #useropt{
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+
+#profile #useropt a{
+    font-size: 1.8em;
+    width: 40%;
+    text-align: center;
+}
+
+/*=============================================================================================================Profile*/
+
+/*======================================================================================================================UserController*/
 
 
-/*======================================================================================================================MainController*/
+/*======================================================================================================================ProductosController*/
+#addForm form textarea{
+    width: 80%;
+    height: 200px;
+    margin: 15px auto;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #0da5e0;
+    font-size: 1.5em;
+    padding: 5px;
+    color:#0da5e0;
+    resize: none;
+}
+
+#addForm form select{
+    width: 80%;
+    margin: 15px auto;
+    background: #0da5e0;
+    color:white;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 3px;
+    border: none;
+}
 
 /*======================================================================================================================ProductosController*/
 
+/*======================================================================================================================CategoriaController*/
+#catTemplate{
+    width: 100%;
+    min-height: 85vh;
+    height: auto;
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.8);
+    grid-template-rows: auto ;
+
+}
+
+#catTemplate h1{
+    color:white;
+    text-align:center;
+    font-size: 2em;
+    padding: 15px 0;
+    margin: auto;
+}
+
+#catTemplate h2{
+    color:#0da5e0;
+    font-size: 1.8em;
+    margin: auto;
+    text-align: center;
+}
+
+#catTemplate #prodRow{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+#catTemplate #prodRow #listProd{
+    width: 100%;
+    height: 500px;
+    display: grid;
+    margin: 10px auto;
+}
+
+#catTemplate #prodRow #listProd a{
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-rows: 80% 10% 10%;
+    text-decoration: none;
+    background: rgba(128, 128, 128, 0.4);
+    border-radius: 5px;
+    transition: 400ms;
+}
+
+#catTemplate #prodRow #listProd a:hover{
+    transform: scale(1.05,1.05);
+    background-color: rgba(28, 58, 99, 0.81);
+}
+
+#catTemplate #prodRow #listProd div{
+    height: 90%;
+    width: 90%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin: auto;
+    display: grid;
+    border-radius: 10px;
+}
+
+#catTemplate #prodRow #listProd div img{
+    height: 100%;
+    margin: auto;
+    border-radius: 10px;
+    justify-content: center;
+}
 
 
-/*======================================================================================================================ProductosController*/
+#catTemplate #prodRow #lisProd h2{
+    color:#0da5e0;
+    margin: auto;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+#catTemplate #prodRow #listProd h3{
+    color:white;
+    font-size: 1.6em;
+    text-align: center;
+    margin: auto;
+}
+
+
+#tableProd div{
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin-bottom: 30px;
+}
+
+#tableProd div h2{
+    width: 100%;
+    height: fit-content;
+    font-size: 1.8em;
+    color:#0da5e0;
+    text-align: center;
+    margin: auto;
+    overflow-x: hidden;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+
+/*======================================================================================================================CategoriaController*/
 
 /*======================================================================================================================Classes*/
 .button{
@@ -472,14 +666,20 @@ footer nav #mainnav li ul{
 
 .error{
     font-size: 1.2em;
-    color:red;
-    margin:auto;
-    text-align: center;
+    color:red!important;
+    margin:auto!important;
+    text-align: center!important;
 }
 
 .logro{
     font-size: 1.2em;
-    color:green;
-    margin:auto;
-    text-align: center;
+    color:green!important;
+    margin:auto!important;
+    text-align: center!important;
+}
+
+.delete:hover{
+    background-color: red!important;
+    color:white!important;
+    border: 1px solid red!important;
 }
