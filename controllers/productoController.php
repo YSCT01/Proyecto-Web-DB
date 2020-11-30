@@ -120,4 +120,13 @@ class productoController{
         require_once 'views/producto/todos.php';
     }
 
+    public function details(){
+        if(isset($_GET['id'])){
+            $prod = new Producto();
+            $prod->setId($_GET['id']);
+            $data = $prod->getOne()->fetch_object();
+            require_once 'views/producto/oneItem.php';
+        }
+    }
+
 }

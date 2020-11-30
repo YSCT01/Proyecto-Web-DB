@@ -65,4 +65,34 @@ class usuarioController{
         }
     }
 
+    public function editData(){
+       require_once 'views/usuario/editData.php';
+    }
+
+    public function edit(){
+        $user = new Usuario();
+        $user->setNombre($_POST['nombre']);
+        $user->setApellidos($_POST['apellido']);
+        $user->setId($_SESSION['log']->id);
+        $edited = $user->edit();
+        if($edited){
+            $_SESSION['editado'] = "<h1 class='logro'>Datos actualizados correctamente</h1>";
+            $_SESSION['log']->nombres = $user->getNombre();
+            $_SESSION['log']->apellidos = $user->getApellidos();
+
+        }
+        else{
+            $_SESSION['editado'] = "<h1 class='error'>Algo salió mal, intenta de nuevo</h1>";
+        }
+
+        header('location:'.base_url.'usuario/editData');
+    }
+
+    public function delete(){
+        $user = new Usuario();
+        $user->setId($_SESSION['log']->id);
+        $user->delete();
+        header('location:'.base_url.'usuario/logout');
+    }
+
 }

@@ -118,4 +118,28 @@ class Usuario{
             return false;
         }
     }
+
+    public function edit(){
+        $sql = "UPDATE usuarios SET nombres = '{$this->getNombre()}', apellidos = '{$this->getApellidos()}' WHERE id = {$this->getId()}";
+        $query = $this->db->query($sql);
+
+        if($query){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public function delete(){
+        $query = "DELETE FROM usuarios WHERE id = {$this->getId()}";
+        $delete = $this->db->query($query);
+
+        if($delete){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }

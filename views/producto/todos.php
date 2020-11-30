@@ -6,13 +6,14 @@
         <div id="prodRow">
             <?php while($product = $list->fetch_object()): ?>
                 <div id="listProd">
-                    <a href="#">
+                    <a  id="prod" href="<?=base_url?>producto/details&id=<?=$product->id?>">
                         <div>
                             <img src="<?=base_url?>uploads/<?=$product->imagen?>">
                         </div>
                         <h2><?=$product->titulo?></h2>
                         <h3>$<?=$product->precio?></h3>
                     </a>
+                    <a href="<?=base_url?>pedido/addCart&id=<?=$product->id?>&qty=1" class="button">Comprar</a>
                 </div>
             <?php endwhile; ?>
         </div>

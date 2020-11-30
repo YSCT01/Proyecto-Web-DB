@@ -7,20 +7,16 @@
                 <li><a href="<?=base_url?>">Inicio</a></li>
                 <li><a href="<?=base_url?>producto/all">Productos</a>
                     <ul>
-                        <li><a href="<?=base_url?>categoria/smartphone">Smartphones</a></li>
-                        <li><a href="<?=base_url?>categoria/tablet">Tablets</a></li>
-                        <li><a href="<?=base_url?>categoria/laptop">Laptops</a></li>
-                        <li><a href="<?=base_url?>categoria/watch">Wearables</a></li>
-                        <li><a href="<?=base_url?>categoria/otros">Accesorios</a></li>
+                        <li><i class="fas fa-mobile"></i><a href="<?=base_url?>categoria/smartphone">Smartphones</a></li>
+                        <li><i class="fas fa-tablet"></i><a href="<?=base_url?>categoria/tablet">Tablets</a></li>
+                        <li><i class="fas fa-laptop"></i><a href="<?=base_url?>categoria/laptop">Laptops</a></li>
+                        <li><i class="fas fa-clock"></i><a href="<?=base_url?>categoria/watch">Wearables</a></li>
+                        <li><i class="fas fa-headphones-alt"></i><a href="<?=base_url?>categoria/otros">Accesorios</a></li>
                     </ul>
                 </li>
                 <li><a  href="<?=base_url?>main/contacto">Contacto</a></li>
                 <li><a  href="<?=base_url?>main/nosotros">Nosotros</a></li>
-                <?php if(isset($_SESSION['log'])): ?>
-                    <li><a href="<?=base_url?>usuario/profile"><?=$_SESSION['log']->nombres ?></a> <a  href="<?=base_url?>usuario/logOut" class="button delete">Cerrar Sesión</a></li>
-                <?php  else:?>
-                    <li><a  href="<?=base_url?>main/login">Iniciar sesión</a></li>
-                <?php endif;?>
+
             </ul>
         </nav>
         <div id="social">

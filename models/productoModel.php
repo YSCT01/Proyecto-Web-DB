@@ -139,7 +139,6 @@ $this->db = Database::connect();
         $sql = "SELECT * FROM productos WHERE id = {$this->getId()}";
 
         $query = $this->db->query($sql);
-
         if($query){
             return $query;
         }
