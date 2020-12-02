@@ -8,12 +8,12 @@
     </div>
     <div id="useropt">
         <?php if($_SESSION['log']->rol === 'admin'): ?>
-            <a class="button"><i class="fas fa-folder-plus"></i> Gestión pedidos</a>
+            <a href="<?=base_url?>pedido/administrate" class="button"><i class="fas fa-folder-plus"></i> Gestión pedidos</a>
             <a href="<?=base_url?>producto/addProduct" class="button"><i class="fas fa-folder-plus"></i> Añadir producto</a>
             <a href="<?=base_url?>producto/editProduct" class="button"><i class="far fa-edit"></i> Editar productos</a>
             <a href="<?=base_url?>usuario/logOut" class="button"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
         <?php else: ?>
-        <a class="button"><i class="fas fa-gift"></i> Pedidos</a>
+        <a href="<?=base_url?>pedido/all" class="button"><i class="fas fa-gift"></i> Pedidos</a>
         <a href="<?=base_url?>usuario/editData" class="button"><i class="far fa-edit"></i> Editar Datos</a>
         <a href="<?=base_url?>usuario/delete" class="button delete"><i class="far fa-trash-alt"></i> Borrar perfil</a>
         <a href="<?=base_url?>usuario/logOut" class="button delete"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>

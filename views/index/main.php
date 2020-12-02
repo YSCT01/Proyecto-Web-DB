@@ -20,27 +20,27 @@
     <div class="container">
 
         <!-- Full-width images with number text -->
-        <a href="Smartphones.html" class="mySlides">
+        <a href="<?=base_url?>categoria/smartphone" class="mySlides">
             <div class="numbertext">1 / 5</div>
             <img src="<?=base_url?>assets/images/phone.jpg" style="height:350px">
         </a>
 
-        <a href="Tablets.html" class="mySlides">
+        <a href="<?=base_url?>categoria/tablet"  class="mySlides">
             <div class="numbertext">2 / 5</div>
             <img src="<?=base_url?>assets/images/tablet.jpg" style="height:350px">
         </a>
 
-        <a href="Laptops.html" class="mySlides">
+        <a href="<?=base_url?>categoria/laptop"  class="mySlides">
             <div class="numbertext">3 / 5</div>
             <img src="<?=base_url?>assets/images/laptop.jpg" style="height:350px">
         </a>
 
-        <a href="Wearables.html" class="mySlides">
+        <a href="<?=base_url?>categoria/watch"  class="mySlides">
             <div class="numbertext">4 / 5</div>
             <img src="<?=base_url?>assets/images/watch.jpg" style="height:350px">
         </a>
 
-        <a href="Others.html" class="mySlides">
+        <a href="<?=base_url?>categoria/otros"  class="mySlides">
             <div class="numbertext">5 / 5</div>
             <img src="<?=base_url?>assets/images/otros.jpg" style="height:350px">
         </a>

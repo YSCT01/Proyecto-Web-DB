@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf8">
     <title>SmartWorld</title>
-    <link rel="stylesheet" href="<?=base_url?>assets/css/style.css?ver=2.3">
+    <link rel="stylesheet" href="<?=base_url?>assets/css/style.css?ver=2.6">
     <link rel="stylesheet" href="<?=base_url?>assets/css/slider.css?ver=1.1">
     <script src="https://kit.fontawesome.com/32ec682ca2.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="menu-fixed">
-    <a id="logo" href="<?=base_url?>">SmartWorld</a>
+    <a id="logo" href="<?=base_url?>">SmartWorld <i class="fas fa-globe"></i></a>
     <nav>
         <ul id="mainnav">
             <li><a href="<?=base_url?>">Inicio</a></li>

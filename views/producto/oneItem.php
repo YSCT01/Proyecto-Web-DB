@@ -15,8 +15,12 @@
         </div>
        <form id="qty" method="POST" action="<?=base_url?>pedido/addCart&id=<?=$data->id?>">
            <label>Cantidad</label>
-           <input type="number" value="1" name="qty" min="1" pattern="^[0-9]+">
-           <input type="submit" class="button" value="Comprar">
+           <input type="number" value="1" name="qty" min="1" max="<?=$data->stock?>" pattern="^[0-9]+">
+           <?php if($data->stock >= 1): ?>
+               <button type="submit" class="button"><i class="fas fa-cart-plus"></i>  Comprar</button>
+           <?php else: ?>
+           <button type="submit" class="button error" style="cursor: not-allowed"> Agotado</button>
+           <?php endif; ?>
        </form>
    </div>
 </div>

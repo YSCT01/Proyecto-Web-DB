@@ -18,7 +18,7 @@ header{
     background-color: black;
     color:white;
     display: grid;
-    grid-template-columns: 10% 70%;
+    grid-template-columns: 15% 70%;
     justify-content: space-between;
 }
 
@@ -28,6 +28,11 @@ header #logo{
     color: #0da5e0;
     font-size: 1.5em;
     padding-left: 20px;
+    transition: 400ms;
+}
+
+header #logo:hover{
+    transform: scale(1.4,1.4);
 }
 
  nav{
@@ -172,6 +177,7 @@ footer nav #mainnav li ul{
     background-color: rgba(0, 0, 0, 0.85);
     display: grid;
     border-bottom:1px solid white;
+    padding: 20px 0;
 }
 
 .indexcont h1{
@@ -809,6 +815,7 @@ text-align: center;
     border-bottom: 1px solid white;
     color: whitesmoke;
     transition: 400ms;
+
 }
 
 #carrito td a{
@@ -821,11 +828,96 @@ text-align: center;
     transform: scale(1.1,1.1)!important;
 }
 
+#carrito td #imgtable{
+    width: 200px;
+    height: 200px;
+    margin: 5px auto;
+    display: grid;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
 
 #carrito td img{
-    width: 150px;
-    max-height: 200px;
+    width: 200px;
     margin: auto;
+}
+
+#allped{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+#allped h1{
+    color:White;
+    font-size: 2em;
+    margin: 15px auto;
+    text-align: center;
+    height: 50px;
+}
+
+#allped #tabped{
+    width: 100%;
+
+    display: grid;
+    padding: 10px 0;
+}
+#allped #tabdhead{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+
+}
+
+#allped #tabdhead h2{
+    color:white;
+    margin: auto;
+    text-align: center;
+}
+
+#allped #tabdetail{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 80px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    height: auto;
+}
+
+
+#allped #tabdetail h2{
+    color:#0da5e0;
+    text-align: center;
+    margin: auto;
+}
+
+#allped button{
+    color: white;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.5em;
+    background: transparent;
+    border: none;
+}
+
+#allped button:hover{
+    color:#0da5e0;
+    transform: scale(1,1);
+
+}
+
+#allped select{
+    background-color: transparent;
+    border: 1px solid #0da5e0;
+    color:#0da5e0;
+    text-align: center;
+    margin: auto;
+    font-size: 1em;
 }
 /*======================================================================================================================PedidoController*/
 
@@ -853,6 +945,11 @@ text-align: center;
     color:red!important;
     margin:auto!important;
     text-align: center!important;
+}
+
+.error:hover{
+    transform: scale(1,1);
+    color:red!important;
 }
 
 .logro{

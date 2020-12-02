@@ -13,7 +13,11 @@
                         <h2><?=$product->titulo?></h2>
                         <h3>$<?=$product->precio?></h3>
                     </a>
-                    <a href="<?=base_url?>pedido/addCart&id=<?=$product->id?>&qty=1" class="button">Comprar</a>
+                    <?php if($product->stock >= 1): ?>
+                        <a href="<?=base_url?>pedido/addCart&id=<?=$product->id?>&qty=1" class="button"><i class="fas fa-cart-plus"></i>  Comprar</a>
+                    <?php else: ?>
+                        <a href="<?=base_url?>pedido/addCart&id=<?=$product->id?>&qty=1" class="button error" style="cursor: not-allowed">Agotado</a>
+                    <?php endif; ?>
                 </div>
             <?php endwhile; ?>
         </div>

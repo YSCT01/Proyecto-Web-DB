@@ -1,4 +1,5 @@
 <?php
+require_once 'models/pedidoModel.php';
 require_once 'models/productoModel.php';
 class pedidoController{
     public function cart(){
@@ -74,5 +75,80 @@ class pedidoController{
         header('location:'.base_url.'pedido/cart');
     }
 
+    public function comprar(){
+        if(isset($_SESSION['log'])) {
+            $pedido = new Pedido();
+            $total = Utils::getCarrito()['total'];
+            $pedido->genPedido($total);
+            $confirmed = $pedido->lastPedido()->fetch_object();
+            if($total){
+                foreach ($_SESSION['cart'] as $index=>$element){
+                    $pedido->setProductoId($element['id']);
+                    $pedido->setCantidad($element['qty']);
+                    $pedido->setPedidoId($confirmed->id);
+                   $pedido->indivPedido();
+                }
+                unset($_SESSION['cart']);
+                header('location:'.base_url.'pedido/confirmado');
+            }else{
+                $_SESSION['inises'] = "<h1 class='error'>Algo salió mal, intenta de nuevo</h1>";
+                header('location:'.base_url.'pedido/cart');
+            }
+
+        }
+        else{
+            $_SESSION['inises'] = "<h1 class='error'>Inicia sesión primero para poder continuar</h1>";
+            header('location:'.base_url.'pedido/cart');
+        }
+    }
+
+    public function confirmado(){
+        require_once 'views/pedido/realizado.php';
+    }
+
+    public function all(){
+        $ped = new Pedido();
+        $list = $ped->getAllUser();
+
+        require_once 'views/pedido/all.php';
+    }
+
+    public function detailed(){
+        $id_total = $_GET['id'];
+        $ped = new Pedido();
+        $list = $ped->getAllFromPed($id_total);
+        require_once 'views/pedido/details.php';
+    }
+
+    public function administrate(){
+        Utils::isAdmin();
+        $ped = new Pedido();
+        $list = $ped->getAllAdmin();
+
+        require_once 'views/pedido/administrat.php';
+    }
+
+    public function edit(){
+        Utils::isAdmin();
+        $id_total = $_GET['id'];
+        $ped = new Pedido();
+        $list = $ped->getAllFromPed($id_total);
+        require_once 'views/pedido/edit.php';
+    }
+
+    public function update(){
+        Utils::isAdmin();
+        $ped = new Pedido();
+        $ped->setEstado($_POST['status']);
+        $ped->setId($_POST['id']);
+        $update = $ped->updateState();
+        if($update){
+            $_SESSION['status']= "<h1 class='logro'>Estado de pedido actualizado correctamente</h1>";
+        }
+        else{
+            $_SESSION['status']= "<h1 class='error'>Algo salió mal, intenta de nuevo</h1>";
+        }
+        header('location:'.base_url.'pedido/edit&id='.$_POST['total']);
+    }
 
 }

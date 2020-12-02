@@ -1,7 +1,7 @@
 </section>
 
 <footer>
-    <span>SmartWorld &COPY; <?=date('Y');?></span>
+    <span>SmartWorld <i class="fas fa-globe"></i> &COPY; <?=date('Y');?></span>
     <div id="botfooter">
         <nav> <ul id="mainnav">
                 <li><a href="<?=base_url?>">Inicio</a></li>
